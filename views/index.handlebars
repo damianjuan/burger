@@ -12,9 +12,9 @@
 <ul>
     {{!-- burgers to be eaten --}}
     {{#each burgers}}
-    {{#if devoured}}
-    {{> devoured=false}}
-    {{/if}}
+    {{#unless devoured}}
+    {{> burger}}
+    {{/unless}}
     {{/each}}
 </ul>
 
@@ -22,7 +22,7 @@
     {{!-- burgers that have been eater --}}
     {{#each burgers}}
     {{#if devoured}}
-    {{> devoured=true}}
+    {{> burger}}
     {{/if}}
     {{/each}}
 </ul>
